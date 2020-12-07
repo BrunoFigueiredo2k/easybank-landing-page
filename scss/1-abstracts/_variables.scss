@@ -1,0 +1,33 @@
+// Font-family
+$font-public-sans: 'Public Sans',
+sans-serif;
+
+// Margins
+$margin-typography: 20px;
+
+// Font-weights
+$weight-light: 300;
+$weight-normal: 400;
+$weight-bold: 700;
+
+// Font-sizes
+$base-font-size: 18px;
+
+/* -- Colors -- */
+// Primary
+$dark-blue:hsl(233, 26%, 24%);
+$lime-green:hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+// Neutral
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Transitions
+$transition-ease: 200ms ease;
+
+// Screen widths
+$mobile-width: 375px;
+$desktop-width: 1440px;

@@ -1,0 +1,220 @@
+/* Import all .scss directories */
+/* Import all abstracts .scss files */
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Mixins */
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.horizontal-list li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* -- Colors -- */
+/* Import all base .scss files */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/**
+ * Typography
+ * =================================
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ */
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  text-rendering: optimizelegibility;
+  margin-top: 0;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+}
+
+/* Import all components .scss files */
+/* Place all button components styling here */
+.cta-btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+}
+
+/* Place all input components styling here */
+input,
+select,
+textarea {
+  border: 1px solid #ccc;
+  font-size: 18px;
+  padding: 20px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #c7c7c7;
+}
+
+/* Place all modal/popup components styling here */
+/* Import all layouts .scss files */
+/* Footer component */
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header component */
+header {
+  color: white;
+  padding: 20px;
+}
+
+header .menu-items {
+  color: #9698a6;
+}
+/*# sourceMappingURL=main.css.map */

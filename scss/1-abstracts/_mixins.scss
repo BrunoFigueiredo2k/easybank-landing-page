@@ -1,0 +1,44 @@
+/* Mixins */
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+    li {
+        display: inline-block;
+
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+.horizontal-list {
+    @include horizontal-list;
+}
+
+@mixin mobile {
+    @media (max-width: #{$desktop-width - 100px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin container($width) {
+    margin: 0 auto;
+    width: $width;
+}
+
+.container {
+    @include container(80%);
+}
