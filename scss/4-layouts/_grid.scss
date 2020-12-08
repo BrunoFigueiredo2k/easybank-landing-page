@@ -1,0 +1,30 @@
+.row {
+    display: flex;
+    height: 100%;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .col {
+        padding: 12px;
+        position: relative;
+
+        @include mobile {
+            flex: 100%;
+        }
+    }
+
+    .col-3 {
+        flex: 25%;
+    }
+
+    .col-4 {
+        flex: 33%;
+    }
+
+    .col-6 {
+        flex: 50%;
+    }
+
+}

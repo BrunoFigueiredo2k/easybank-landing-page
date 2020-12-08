@@ -1,3 +1,19 @@
 section {
     padding: 60px 40px;
 }
+
+#why-section {
+    background-color: $light-grayish-blue;
+}
+
+#landing-section,
+#latest-articles-section {
+    background-color: $very-light-gray;
+}
+
+#landing-section {
+    @include backgroundImageCover('/images/bg-intro-desktop.svg');
+    background-position-x: 700px;
+    background-position-y: -400px;
+    padding: 21vh 40px;
+}

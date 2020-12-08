@@ -1,0 +1,15 @@
+.card {
+    border-radius: 5px;
+
+    &-top {
+        height: 200px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    &-bottom {
+        background-color: $white;
+        padding: 20px;
+        min-height: 180px;
+    }
+}

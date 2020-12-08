@@ -15,6 +15,10 @@
             left: -2px;
             right: 2em;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -39,6 +43,13 @@
     width: $width;
 }
 
+@mixin backgroundImageCover($img-url) {
+    background: url($img-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+}
+
 .container {
-    @include container(80%);
+    @include container(87%);
 }

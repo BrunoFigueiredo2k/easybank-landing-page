@@ -15,9 +15,13 @@
   margin-right: 2em;
 }
 
+.horizontal-list li:hover {
+  cursor: pointer;
+}
+
 .container {
   margin: 0 auto;
-  width: 80%;
+  width: 87%;
 }
 
 /* -- Colors -- */
@@ -105,6 +109,8 @@ main {
 
 body {
   line-height: 1;
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 ol,
@@ -157,9 +163,10 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Public Sans", sans-serif;
   text-rendering: optimizelegibility;
   margin-top: 0;
+  margin-bottom: 20px;
+  color: #2d314d;
 }
 
 h1 small,
@@ -171,50 +178,200 @@ h6 small {
   font-weight: normal;
 }
 
+.title-landing {
+  font-size: 48px;
+  line-height: 1.3em;
+}
+
+.title-section {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.sm-title {
+  font-size: 22px;
+  margin: 30px 0;
+}
+
+p {
+  color: #9698a6;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.article-author {
+  font-size: 13px;
+}
+
+.article-title {
+  font-size: 22px;
+  line-height: 1.35em;
+}
+
 /* Import all components .scss files */
 /* Place all button components styling here */
 .cta-btn {
   color: white;
-  padding: 10px 20px;
+  background: #31d35c;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+  padding: 10px 24px;
   border-radius: 20px;
+  font-weight: 700;
   border: none;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  display: inline-block;
 }
 
 .cta-btn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
-/* Place all input components styling here */
-input,
-select,
-textarea {
-  border: 1px solid #ccc;
-  font-size: 18px;
-  padding: 20px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border: 1px solid #c7c7c7;
+button {
+  outline: none;
 }
 
 /* Place all modal/popup components styling here */
+.card {
+  border-radius: 5px;
+}
+
+.card-top {
+  height: 200px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.card-bottom {
+  background-color: white;
+  padding: 20px;
+  min-height: 180px;
+}
+
+#image-currency {
+  background: url("/images/image-currency.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
+#image-restaurant {
+  background: url("/images/image-restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
+#image-airplane {
+  background: url("/images/image-plane.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
+#image-confetti {
+  background: url("/images/image-confetti.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
+#image-mockups {
+  right: -130px;
+  top: -80px;
+  position: absolute;
+}
+
 /* Import all layouts .scss files */
 /* Footer component */
 footer {
   color: white;
+  background-color: #2d314d;
   padding: 20px;
-  text-align: center;
+  width: 100%;
 }
 
 /* Header component */
 header {
   color: white;
   padding: 20px;
+  z-index: 99999;
+  position: relative;
 }
 
 header .menu-items {
   color: #9698a6;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+#why-section {
+  background-color: #f3f4f6;
+}
+
+#landing-section,
+#latest-articles-section {
+  background-color: #fafafa;
+}
+
+#landing-section {
+  background: url("/images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+  background-position-x: 700px;
+  background-position-y: -400px;
+  padding: 21vh 40px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: 1340px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.row .col {
+  padding: 12px;
+  position: relative;
+}
+
+@media (max-width: 1340px) {
+  .row .col {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.row .col-3 {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+}
+
+.row .col-4 {
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+}
+
+.row .col-6 {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 /*# sourceMappingURL=main.css.map */

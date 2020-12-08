@@ -2,6 +2,8 @@
 header {
     color: white;
     padding: 20px;
+    z-index: 99999;
+    position: relative;
 
     .menu-items {
         color: $grayish-blue;
