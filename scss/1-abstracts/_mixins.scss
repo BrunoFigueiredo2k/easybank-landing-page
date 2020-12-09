@@ -52,4 +52,8 @@
 
 .container {
     @include container(87%);
+
+    @include mobile {
+        @include container(95%);
+    }
 }

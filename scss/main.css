@@ -1,5 +1,6 @@
 /* Import all .scss directories */
 /* Import all abstracts .scss files */
+/* -- Colors -- */
 /* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Mixins */
@@ -24,7 +25,13 @@
   width: 87%;
 }
 
-/* -- Colors -- */
+@media (max-width: 1340px) {
+  .container {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
 /* Import all base .scss files */
 *,
 *:before,
@@ -215,8 +222,8 @@ p {
   background: #31d35c;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
-  padding: 10px 24px;
-  border-radius: 20px;
+  padding: 15px 30px;
+  border-radius: 25px;
   font-weight: 700;
   border: none;
   -webkit-transition: 200ms ease;
@@ -238,10 +245,23 @@ button {
   border-radius: 5px;
 }
 
+@media (max-width: 1340px) {
+  .card {
+    text-align: left;
+  }
+}
+
 .card-top {
   height: 200px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  -webkit-filter: brightness(100%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.card-top:hover {
+  -webkit-filter: brightness(70%);
 }
 
 .card-bottom {
@@ -280,8 +300,15 @@ button {
 
 #image-mockups {
   right: -130px;
-  top: -80px;
+  top: -60px;
   position: absolute;
+}
+
+@media (max-width: 1340px) {
+  #image-mockups {
+    top: -100px;
+    z-index: -1;
+  }
 }
 
 /* Import all layouts .scss files */
@@ -289,24 +316,120 @@ button {
 footer {
   color: white;
   background-color: #2d314d;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
+}
+
+footer .footer-ul li {
+  margin-bottom: 20px;
+  color: #f3f4f6;
+}
+
+footer .footer-ul li:hover {
+  cursor: pointer;
 }
 
 /* Header component */
 header {
-  color: white;
-  padding: 20px;
+  padding: 15px;
   z-index: 99999;
   position: relative;
+  background-color: white;
+}
+
+header .wrapper {
+  width: 100%;
+  display: table;
+}
+
+header .wrapper .central {
+  display: table-cell;
+  text-align: center;
+}
+
+header .wrapper .left,
+header .wrapper .right {
+  display: table-cell;
+}
+
+header .wrapper .right {
+  text-align: right;
+}
+
+@media (max-width: 1340px) {
+  header .wrapper .central,
+  header .wrapper .right {
+    display: none;
+  }
 }
 
 header .menu-items {
   color: #9698a6;
 }
 
+header .menu-items li {
+  border-bottom: 4px solid transparent;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+header .menu-items li:hover {
+  border-bottom: 4px solid #31d35c;
+}
+
+header #mobile-right {
+  display: none;
+}
+
+header #mobile-right:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1340px) {
+  header #mobile-right {
+    display: inline-block;
+  }
+  header #mobile-right #mobile-btn {
+    color: #9698a6;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  z-index: 1;
+  padding: 10px;
+  font-weight: 400;
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 0 0 100px 250px rgba(45, 49, 77, 0.6);
+          box-shadow: 0 0 100px 250px rgba(45, 49, 77, 0.6);
+  z-index: 9999;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.mobile-menu li {
+  margin: 30px 0;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  color: #2d314d;
+}
+
+.mobile-menu li:hover {
+  color: #31d35c;
+  cursor: pointer;
+}
+
 section {
   padding: 60px 40px;
+}
+
+@media (max-width: 1340px) {
+  section {
+    text-align: center;
+  }
 }
 
 #why-section {

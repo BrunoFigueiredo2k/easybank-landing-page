@@ -1,10 +1,24 @@
 .card {
     border-radius: 5px;
 
+    @include mobile {
+        text-align: left;
+    }
+
     &-top {
         height: 200px;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
+        -webkit-filter: brightness(100%);
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
+
+        &:hover {
+            -webkit-filter: brightness(70%);
+        }
     }
 
     &-bottom {

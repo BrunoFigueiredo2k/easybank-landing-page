@@ -1,11 +1,88 @@
 /* Header component */
 header {
-    color: white;
-    padding: 20px;
+    padding: 15px;
     z-index: 99999;
     position: relative;
+    background-color: $white;
+
+    .wrapper {
+        width: 100%;
+        display: table;
+
+        .central {
+            display: table-cell;
+            text-align: center;
+        }
+
+        .left,
+        .right {
+            display: table-cell;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        @include mobile {
+
+            .central,
+            .right {
+                display: none;
+            }
+        }
+    }
 
     .menu-items {
         color: $grayish-blue;
+
+        li {
+            border-bottom: 4px solid transparent;
+            transition: $transition-ease;
+
+            &:hover {
+                border-bottom: 4px solid $lime-green;
+            }
+        }
+    }
+
+    #mobile-right {
+        display: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include mobile {
+            display: inline-block;
+
+            #mobile-btn {
+                color: $grayish-blue;
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+    z-index: 1;
+    padding: 10px;
+    font-weight: $weight-normal;
+    text-align: center;
+    background-color: $white;
+    box-shadow: 0 0 100px 250px hsla(233, 26%, 24%, 0.6);
+    z-index: 9999;
+    border-radius: 5px;
+    @include container(90%);
+    margin-top: 20px;
+
+    li {
+        margin: 30px 0;
+        transition: $transition-ease;
+        color: $dark-blue;
+
+        &:hover {
+            color: $lime-green;
+            cursor: pointer;
+        }
     }
 }

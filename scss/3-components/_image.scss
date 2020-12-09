@@ -16,6 +16,11 @@
 
 #image-mockups {
     right: -130px;
-    top: -80px;
+    top: -60px;
     position: absolute;
+
+    @include mobile {
+        top: -100px;
+        z-index: -1;
+    }
 }
