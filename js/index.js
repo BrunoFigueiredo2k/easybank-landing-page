@@ -10,21 +10,32 @@ var btnSrc = document.getElementById('mobile-btn').src;
 // TODO: fix
 mobileBtn.addEventListener('click', () => {
     if (btnSrc == HAMBURGER_ICON_SRC){
-        btnSrc = CLOSE_ICON_SRC;
+        mobileMenuActive(true);
         mobileMenu.style.display = 'block';
 
         // Onclick outside hide again
         event.stopPropagation();
         window.onclick = function(e) {
             if(e.target != mobileMenu) {
-                btnSrc = HAMBURGER_ICON_SRC;
+                mobileMenuActive(false);
                 mobileMenu.style.display = 'none';
             } else {
                 mobileMenu.style.display = 'block';
             }
         }    
     } else {
-        btnSrc = HAMBURGER_ICON_SRC;
+        mobileMenuActive(false);
         mobileMenu.style.display = 'none';
     }
 });
+
+// Toggle source of mobile menu image btn
+function mobileMenuActive(active){
+    if (active){
+        btnSrc = CLOSE_ICON_SRC;
+        mobileBtn.setAttribute("src", CLOSE_ICON_SRC);
+    } else {
+        btnSrc = HAMBURGER_ICON_SRC;
+        mobileBtn.setAttribute("src", HAMBURGER_ICON_SRC);
+    }
+}
