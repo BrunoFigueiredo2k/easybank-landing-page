@@ -2,6 +2,7 @@ section {
     padding: 60px 40px;
 
     @include mobile {
+        padding: 60px 10px;
         text-align: center;
     }
 }
@@ -20,4 +21,10 @@ section {
     background-position-x: 700px;
     background-position-y: -400px;
     padding: 21vh 40px;
+
+    @include mobile {
+        padding: 60vh 10px 10vh 10px;
+        background-position-x: -200px;
+        background-position-y: -450px;
+    }
 }
