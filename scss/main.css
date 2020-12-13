@@ -397,7 +397,7 @@ header #mobile-right:hover {
 }
 
 .mobile-menu {
-  opacity: 0;
+  display: none;
   z-index: 9999;
   padding: 10px;
   font-weight: 400;
