@@ -7,7 +7,6 @@ const mobileBtn = document.querySelector('#mobile-btn');
 var btnSrc = document.getElementById('mobile-btn').src;
 
 // Click listener hamburger menu btn
-// TODO: fix
 mobileBtn.addEventListener('click', () => {
     if (btnSrc == HAMBURGER_ICON_SRC){
         mobileMenuActive(true);
