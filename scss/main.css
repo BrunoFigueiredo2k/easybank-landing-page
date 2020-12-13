@@ -12,12 +12,21 @@
 
 .horizontal-list li {
   display: inline-block;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
   margin-left: -2px;
   margin-right: 2em;
 }
 
 .horizontal-list li:hover {
   cursor: pointer;
+  color: #31d35c;
+}
+
+@media (max-width: 1340px) {
+  .horizontal-list li {
+    margin: 0 10px !important;
+  }
 }
 
 .container {
@@ -148,6 +157,12 @@ input {
   border-radius: 0;
 }
 
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 /**
  * Typography
  * =================================
@@ -213,6 +228,13 @@ p {
 .article-title {
   font-size: 22px;
   line-height: 1.35em;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.article-title:hover {
+  color: #31d35c;
+  cursor: pointer;
 }
 
 /* Import all components .scss files */
@@ -322,21 +344,39 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 1340px) {
+  footer {
+    text-align: center;
+  }
+}
+
 footer .footer-ul li {
   margin-bottom: 20px;
   color: #f3f4f6;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
 }
 
 footer .footer-ul li:hover {
   cursor: pointer;
+  color: #31d35c;
 }
 
 /* Header component */
 header {
   padding: 15px;
   z-index: 99999;
+  width: 100%;
   position: relative;
   background-color: white;
+}
+
+@media (max-width: 1340px) {
+  header {
+    position: fixed;
+    -webkit-box-shadow: 0 0 15px 2px #00000021;
+            box-shadow: 0 0 15px 2px #00000021;
+  }
 }
 
 header .wrapper {
@@ -410,7 +450,8 @@ header #mobile-right:hover {
   margin: 0 auto;
   width: 90%;
   margin-top: 20px;
-  position: absolute;
+  position: fixed;
+  top: 8%;
   left: 5%;
   -webkit-transition: 200ms ease-in;
   transition: 200ms ease-in;

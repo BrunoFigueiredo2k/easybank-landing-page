@@ -5,27 +5,6 @@
     list-style: none;
 }
 
-@mixin horizontal-list {
-    @include reset-list;
-
-    li {
-        display: inline-block;
-
-        margin: {
-            left: -2px;
-            right: 2em;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
-.horizontal-list {
-    @include horizontal-list;
-}
-
 @mixin mobile {
     @media (max-width: #{$desktop-width - 100px}) {
         @content;
@@ -41,6 +20,33 @@
 @mixin container($width) {
     margin: 0 auto;
     width: $width;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+    li {
+        display: inline-block;
+        transition: $transition-ease;
+
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $lime-green
+        }
+
+        @include mobile {
+            margin: 0 10px !important;
+        }
+    }
+}
+
+.horizontal-list {
+    @include horizontal-list;
 }
 
 @mixin backgroundImageCover($img-url) {

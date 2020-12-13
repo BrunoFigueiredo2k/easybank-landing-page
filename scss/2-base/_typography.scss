@@ -59,4 +59,10 @@ p {
 .article-title {
     font-size: #{$base-font-size + 4px};
     line-height: 1.35em;
+    transition: $transition-ease;
+
+    &:hover{
+        color: $lime-green;
+        cursor: pointer;
+    }
 }

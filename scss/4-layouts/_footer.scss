@@ -5,13 +5,19 @@ footer {
     padding: 40px;
     width: 100%;
 
+    @include mobile {
+        text-align: center;
+    }
+
     .footer-ul {
         li {
             margin-bottom: 20px;
             color: $light-grayish-blue;
+            transition: $transition-ease;
 
             &:hover {
                 cursor: pointer;
+                color: $lime-green;
             }
         }
     }
